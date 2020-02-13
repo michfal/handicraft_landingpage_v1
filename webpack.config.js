@@ -27,35 +27,17 @@ module.exports = {
             }
           },
 
-
         {
-            test: /\.(sa|sc|c)ss$/,
+            test: /\.css$/,
             use: [
-                   {
-                     loader: "css-loader",
-                   },
+              {loader: MiniCssExtractPlugin.loader}
+            ]
+        },
 
-                   {
-                     loader: "postcss-loader"
-                   },
-
-                   {
-                     loader: "sass-loader",
-                     options: {
-                       implementation: require("sass")
-                     }
-                   },
-
-                    {
-                    loader: MiniCssExtractPlugin.loader
-                  },
-
-                  {
-                    loader: "css-loader",
-                  },
-                 ]
+          {
+            test: /\.(sass|scss)$/,
+            use: ['style-loader', 'css-loader', 'sass-loader']
           },
-        
         
         {    
             test: /\.(png|jpe?g|gif|svg)$/,
