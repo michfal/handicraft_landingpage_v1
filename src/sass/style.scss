@@ -1,8 +1,10 @@
-body {
-    background-image: url('../images/Untitled-1.jpg');
-  }
+@import "reset";
+@import "typography";
+@import "variables";
+@import "mixins";
+@import "main";
+@import "about";
+@import "gallery";
+@import "contact";
 
 
-h1, h2 {
-  color: red;
-}
