@@ -46,11 +46,19 @@ module.exports = {
                      loader: "file-loader",
       
                      options: {
-                       outputPath: 'images'
+                       name: '[name].[ext]',
+                       outputPath: 'images',
+                       esModule: false,
                      }
                    }
                  ]
         },
+
+        {
+            test: /\.(html)$/,
+            use: ['html-loader']
+       }
+
 
     ]
   },
@@ -61,8 +69,9 @@ module.exports = {
       filename: "bundle.css"
     }),
     new HtmlWebpackPlugin({
+        inject: 'body',
         template: "src/template/template.html",
-        title: "dupa"
+        title: "szmatki kwiatki"
       }),
   ],
 
