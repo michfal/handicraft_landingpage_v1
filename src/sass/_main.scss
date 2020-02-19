@@ -1,4 +1,11 @@
 .main {
     background-image: url('../images/header_background.svg');
     @include background-basic;
+    
+    &__logo {
+      height: 15vh;
+      margin: 20px;
+    }
+  
   }
+
