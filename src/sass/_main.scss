@@ -3,9 +3,19 @@
     @include background-basic;
     
     &__logo {
-      height: 15vh;
-      margin: 20px;
+      height: 25vh;
+      margin: 35px 0px 0px 105px;
     }
   
   }
+
+  .navbar {
+    margin-left: 105px;
+    padding-top: 12px;
+
+    &__element {
+      margin: 0px 72px 14px 0px;
+    }
+  }
+
 
