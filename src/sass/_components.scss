@@ -1,1 +1,17 @@
 //anything reusable: buttons, navbars, cards  
+@import "base";
+
+.navbar__element {
+    font-size: 15px;
+    color: $base-text-color
+}
+
+.header_bold {
+    font-weight: bold;
+    color: $base-text-color;
+
+    &--big {
+        font-size: 2rem;
+    }
+}
+
