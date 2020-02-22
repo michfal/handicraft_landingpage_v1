@@ -1,0 +1,54 @@
+html, body {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+.navbar {
+    margin-left: 105px;
+    padding-top: 12px;
+  
+    &__element {
+      margin: 0px 72px 14px 0px;
+
+    }
+  }
+
+
+.main {
+    background-image: url('../images/header_background.svg');
+    @include background-basic;
+    
+    &__logo {
+      height: 25vh;
+      max-width: 60vw;
+      margin: 1.7rem 0rem 0rem 8vw;
+    }
+    &__header {
+      margin: 1.5rem 0rem 0rem 8vw;
+    }
+    &__list {
+      margin: 1rem 0rem 0rem 10.5vw;
+    }
+
+  }
+
+
+
+
+.about {
+  background-image: url('../images/about_background.svg');
+  @include background-basic;
+}
+
+
+.gallery {  
+  @include background-basic;
+}
+
+
+.contact {
+    background-image: url('../images/contact_background.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 50vh;
+  }

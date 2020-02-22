@@ -1,5 +1,9 @@
+//variables, mixins, classes
+
 @mixin background-basic {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
 }
+
+$base-text-color: #31506E;

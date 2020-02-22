@@ -1,10 +1,4 @@
 @import "reset";
-@import "typography";
-@import "variables";
-@import "mixins";
-@import "main";
-@import "about";
-@import "gallery";
-@import "contact";
-
-
+@import "base";
+@import "components";
+@import "layout";
