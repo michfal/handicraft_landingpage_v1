@@ -20,8 +20,16 @@ html, body {
     
     &__logo {
       height: 25vh;
-      margin: 35px 0px 0px 105px;
+      max-width: 60vw;
+      margin: 1.7rem 0rem 0rem 8vw;
     }
+    &__header {
+      margin: 1.5rem 0rem 0rem 8vw;
+    }
+    &__list {
+      margin: 1rem 0rem 0rem 10.5vw;
+    }
+
   }
 
 

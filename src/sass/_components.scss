@@ -6,12 +6,29 @@
     color: $base-text-color
 }
 
-.header_bold {
+.header_dark {
     font-weight: bold;
     color: $base-text-color;
 
     &--big {
-        font-size: 2rem;
+        font-size: 2.23rem;
+    }
+
+    &--black {
+        font-weight: 900;
     }
 }
 
+.list_small {
+
+    &__item {
+        margin: 0 0 1rem 0;
+    }
+    &__item:before {
+        content:"·";
+        font-size: 2rem;
+        vertical-align: top;
+        line-height: 1rem;
+        padding-right: 1rem;
+    }
+}
