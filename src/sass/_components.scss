@@ -2,16 +2,16 @@
 @import "base";
 
 .navbar__element {
-    font-size: 15px;
-    color: $base-text-color
+    font-size: 1.1rem;
+    color: $dark-header-color
 }
 
 .header_dark {
     font-weight: bold;
-    color: $base-text-color;
+    color: $dark-header-color;
 
     &--big {
-        font-size: 2.23rem;
+        font-size: 3rem;
     }
 
     &--black {
@@ -19,16 +19,47 @@
     }
 }
 
+.header_light {
+    color: $light-header-color;
+    font-size: 2.2rem;
+}
+
 .list_small {
 
     &__item {
         margin: 0 0 1rem 0;
+        font-size: 1.4rem;
     }
     &__item:before {
         content:"·";
-        font-size: 2rem;
+        font-size: 3rem;
         vertical-align: top;
-        line-height: 1rem;
+        line-height: 1.5rem;
         padding-right: 1rem;
     }
+}
+
+.offer_list {
+    //margin-top: 1.1rem;
+    max-width: 30rem;
+    vertical-align: center;
+    border: 1px solid red;
+    &__item {
+        color: white;
+        margin: auto;
+        padding: $offer_list_item_padding_top 3rem;
+        font-size: $offer_list_item_font_size;
+        margin: 1rem;
+        border-radius: 2rem;
+        background-color: #A06FD7;
+        display: inline-block;
+        vertical-align: center;
+        text-align: center;
+    }
+}
+
+.paragraph--light {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: $light-paragraph-color;
 }
