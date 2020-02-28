@@ -34,39 +34,61 @@ html, body {
 
 
 
+// .about__offer
+// .about__text
+// .about__illustration
+// .about__call_to_action
 .about {
   background-image: url('../images/about_background.svg');
   @include background-basic;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  border: 1px solid red;
+
+  // border: 1px solid red;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: 
+    'offer text'
+    'illustration call_to_action'
+  ;
 
   &__offer {
-   // margin: 17vh auto auto $margin-left-small;
-    padding: 16vh 10vw 5vh 8vw;
-    width: 49vw;
-    border: 1px solid red;
-    // &_list{
-    //    margin: 1rem;
-    // }
+    grid-area: offer;
+    align-self: center;
+    justify-self: center;
+    // border: 1px solid red;
+    margin: 4.2rem 5.6rem auto auto;
+    &_list {
+       width: 90%;
+       padding-left: 1rem;
+       margin-top: 1rem;
+    }
   }
 
   &__text {
-    //margin: 17vh 3vw auto auto;
-    padding: 16vh 8vw 5vh 4vw;
-    border: 1px solid red;
-    width: 49vw;
+    grid-area: text;
+    justify-self: center;
+    align-self: center;
+    margin: 2.6rem 3rem 0 0;
+    // border: 1px solid red;
+    width: 75%;
+    height: 70%;
+  }
+
+  &__text_paragraph {
+    margin-bottom: 1rem;
   }
 
   &__illustration {
     height: 40vh;
-    margin: 1vh 1vw 1vh 13vw;
+    grid-area: illustration;
+    justify-self: center;
+    // margin: 1vh 1vw 1vh 13vw;
+    // border: 1px solid red;
   }
 
-  &__call_to_a_list {
-    width: 49vw;
-    border: 1px solid red;
+  &___call_to_action {
+    grid-area: call_to_action;
+    // width: 49vw;
+    // border: 1px solid red;
   }
 }
 

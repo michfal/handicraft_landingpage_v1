@@ -43,7 +43,7 @@
     //margin-top: 1.1rem;
     max-width: 30rem;
     vertical-align: center;
-    border: 1px solid red;
+    // border: 1px solid red;
     &__item {
         color: white;
         margin: auto;
@@ -58,8 +58,18 @@
     }
 }
 
-.paragraph--light {
+
+.paragraph {
     font-size: 1.3rem;
     font-weight: 400;
+    line-height: 1.5rem;
+
+}
+
+.paragraph--light {
     color: $light-paragraph-color;
+}
+
+.paragraph--dark {
+    color: $light-header-color;
 }
