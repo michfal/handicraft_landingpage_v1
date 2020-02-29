@@ -34,15 +34,11 @@ html, body {
 
 
 
-// .about__offer
-// .about__text
-// .about__illustration
-// .about__call_to_action
 .about {
   background-image: url('../images/about_background.svg');
   @include background-basic;
 
-  // border: 1px solid red;
+  //border: 1px solid red;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-areas: 
@@ -68,7 +64,7 @@ html, body {
     justify-self: center;
     align-self: center;
     margin: 2.6rem 3rem 0 0;
-    // border: 1px solid red;
+    //border: 1px solid red;
     width: 75%;
     height: 70%;
   }
@@ -85,10 +81,13 @@ html, body {
     // border: 1px solid red;
   }
 
-  &___call_to_action {
+  &__call_to_action {
     grid-area: call_to_action;
-    // width: 49vw;
-    // border: 1px solid red;
+    justify-self: center;
+    
+    width: 70%;
+    margin: 0rem 7.5rem auto auto;
+    //border: 1px solid red;
   }
 }
 

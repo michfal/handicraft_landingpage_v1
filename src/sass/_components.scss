@@ -73,3 +73,27 @@
 .paragraph--dark {
     color: $light-header-color;
 }
+
+
+.call_to_action {
+    
+    &__item:before {
+         content:url('../images/pointer.svg');
+    //     background-image: url('../images/pointer.svg');
+    //     background-size: 6rem 6rem;
+        display: inline-block;
+        width: 5rem; 
+        height: 5rem;
+        position: absolute;
+        left: 0rem;
+        top: 0.3rem
+         
+     }
+    &__item {
+        margin: 1rem 1rem 4rem 1rem;
+        width: 80%;
+        padding-left: 6rem;
+       // border: 1px solid red;
+        position: relative;
+    }
+}
