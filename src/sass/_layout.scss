@@ -39,6 +39,7 @@ html, body {
   @include background-basic;
 
   //border: 1px solid red;
+  
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-areas: 
