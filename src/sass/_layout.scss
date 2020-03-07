@@ -1,14 +1,14 @@
 html, body {
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    
 }
 
 .navbar {
-    margin-left: 105px;
-    padding-top: 12px;
+    margin-left: $margin-left-small;
+    padding-top: 1.2rem;
   
     &__element {
-      margin: 0px 72px 14px 0px;
+      margin: 0 4.5rem 0.875rem 0;
 
     }
   }
@@ -21,10 +21,10 @@ html, body {
     &__logo {
       height: 25vh;
       max-width: 60vw;
-      margin: 1.7rem 0rem 0rem 8vw;
+      margin: 1.7rem 0rem 0rem $margin-left-small;
     }
     &__header {
-      margin: 1.5rem 0rem 0rem 8vw;
+      margin: 1.5rem 0rem 0rem $margin-left-small;
     }
     &__list {
       margin: 1rem 0rem 0rem 10.5vw;
@@ -34,10 +34,62 @@ html, body {
 
 
 
-
 .about {
   background-image: url('../images/about_background.svg');
   @include background-basic;
+
+  //border: 1px solid red;
+  
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: 
+    'offer text'
+    'illustration call_to_action'
+  ;
+
+  &__offer {
+    grid-area: offer;
+    align-self: center;
+    justify-self: center;
+    // border: 1px solid red;
+    margin: 4.2rem 5.6rem auto auto;
+    &_list {
+       width: 90%;
+       padding-left: 1rem;
+       margin-top: 1rem;
+    }
+  }
+
+  &__text {
+    grid-area: text;
+    justify-self: center;
+    align-self: center;
+    margin: 2.6rem 3rem 0 0;
+    //border: 1px solid red;
+    width: 75%;
+    height: 70%;
+  }
+
+  &__text_paragraph {
+    margin-bottom: 1rem;
+  }
+
+  &__illustration {
+    height: 40vh;
+    grid-area: illustration;
+    justify-self: center;
+    // margin: 1vh 1vw 1vh 13vw;
+    // border: 1px solid red;
+  }
+
+  &__call_to_action {
+    grid-area: call_to_action;
+    justify-self: center;
+    
+    width: 70%;
+    margin: 0rem 7.5rem auto auto;
+    //border: 1px solid red;
+  }
 }
 
 
