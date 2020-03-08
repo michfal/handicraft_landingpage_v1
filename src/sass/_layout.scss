@@ -94,7 +94,18 @@ html, body {
 
 
 .gallery {  
-  @include background-basic;
+  //@include background-basic;
+  &__images {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-auto-rows: auto;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    justify-content: center;
+  }
 }
 
 

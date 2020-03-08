@@ -97,3 +97,16 @@
         position: relative;
     }
 }
+
+.image_container {
+    overflow: hidden;
+    width: 14rem;
+    height: 14rem;
+    background-color: black;
+    
+    img {
+        max-width: none;
+        min-height: 100%;
+    }
+}
+
