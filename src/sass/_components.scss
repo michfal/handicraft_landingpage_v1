@@ -2,7 +2,7 @@
 @import "base";
 
 .navbar__element {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     color: $dark-header-color
 }
 
@@ -11,7 +11,7 @@
     color: $dark-header-color;
 
     &--big {
-        font-size: 3rem;
+        font-size: 2.2rem;
     }
 
     &--black {
@@ -21,20 +21,20 @@
 
 .header_light {
     color: $light-header-color;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
 }
 
 .list_small {
 
     &__item {
         margin: 0 0 1rem 0;
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
     &__item:before {
         content:"·";
-        font-size: 3rem;
+        font-size: 2rem;
         vertical-align: top;
-        line-height: 1.5rem;
+        line-height: 1rem;
         padding-right: 1rem;
     }
 }
@@ -48,8 +48,8 @@
         color: white;
         margin: auto;
         padding: $offer_list_item_padding_top 3rem;
-        font-size: $offer_list_item_font_size;
-        margin: 1rem;
+        font-size: $about_text_font_size;
+        margin: 0.5rem;
         border-radius: 2rem;
         background-color: #A06FD7;
         display: inline-block;
@@ -60,9 +60,9 @@
 
 
 .paragraph {
-    font-size: 1.3rem;
+    font-size: $about_text_font_size;
     font-weight: 400;
-    line-height: 1.5rem;
+    line-height: 1.3rem;
 
 }
 
@@ -76,24 +76,26 @@
 
 
 .call_to_action {
-    
+    max-width: 30rem;
     &__item:before {
          content:url('../images/pointer.svg');
     //     background-image: url('../images/pointer.svg');
     //     background-size: 6rem 6rem;
         display: inline-block;
-        width: 5rem; 
-        height: 5rem;
+        width: 6vw; 
+        height: 6vh;
+        max-width: 4.5rem;
+        min-width: 4rem;
         position: absolute;
         left: 0rem;
         top: 0.3rem
          
      }
     &__item {
-        margin: 1rem 1rem 4rem 1rem;
-        width: 80%;
-        padding-left: 6rem;
-       // border: 1px solid red;
+        margin: 1vh auto 8vh 1vw;
+        width: 100%;
+        padding-left: 5rem;
+        //border: 1px solid red;
         position: relative;
     }
 }
