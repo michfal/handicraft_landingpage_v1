@@ -100,18 +100,31 @@ html, body {
 }
 
 
-.gallery {  
-  //@include background-basic;
+.gallery {
+  &__header {
+    margin: 5vh auto 2vh;
+    text-align: center;
+  }
   &__images {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: center;
+    width:70%;
+    margin: 5vh auto;
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-auto-rows: auto;
-    row-gap: 2rem;
-    column-gap: 2rem;
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
     justify-content: center;
+    //border: 1px solid red
+    @media (max-width: 1024px) {
+      grid-template-columns: auto auto auto;
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: auto auto;
+    }
+    @media (max-width: 360px) {
+      grid-template-columns: auto;
+    }
+    
   }
 }
 
@@ -121,4 +134,8 @@ html, body {
     background-repeat: no-repeat;
     background-size: 100%;
     height: 50vh;
+    margin-top: 10vh;
+    &__header {
+      text-align: center;
+    }
   }
