@@ -5,10 +5,10 @@ html, body {
 
 .navbar {
     margin-left: $margin-left-small;
-    padding-top: 1.2rem;
+    padding-top: 0.6rem;
   
     &__element {
-      margin: 0 4.5rem 0.875rem 0;
+      margin: 0 3rem 0.875rem 0;
 
     }
   }
@@ -19,7 +19,7 @@ html, body {
     @include background-basic;
     
     &__logo {
-      height: 25vh;
+      height: 27vh;
       max-width: 60vw;
       margin: 1.7rem 0rem 0rem $margin-left-small;
     }
@@ -47,30 +47,37 @@ html, body {
     'illustration call_to_action'
   ;
 
+  &__header {
+    margin-bottom: 1vh;
+  }
+
   &__offer {
     grid-area: offer;
-    align-self: center;
+    //align-self: center;
     justify-self: center;
-    // border: 1px solid red;
-    margin: 4.2rem 5.6rem auto auto;
+    //border: 1px solid red;
+    margin: 6vh 1rem auto auto;
+    
+    padding-left: 7vw;
     &_list {
        width: 90%;
-       padding-left: 1rem;
-       margin-top: 1rem;
+       padding-left: 1vw;
+      //  margin-top: 1vh;
     }
   }
 
   &__text {
     grid-area: text;
-    justify-self: center;
-    align-self: center;
-    margin: 2.6rem 3rem 0 0;
+    //justify-self: center;
+    //align-self: center;
+    margin: 6vh 3rem 0 0;
     //border: 1px solid red;
-    width: 75%;
-    height: 70%;
+    max-width: 75%;
+    // height: 70%;
   }
 
   &__text_paragraph {
+    // margin-top: 1vh;
     margin-bottom: 1rem;
   }
 
@@ -85,16 +92,40 @@ html, body {
   &__call_to_action {
     grid-area: call_to_action;
     justify-self: center;
-    
-    width: 70%;
-    margin: 0rem 7.5rem auto auto;
+    align-self: center;
+    //width: 70%;
+    margin: 0 auto auto 0;
     //border: 1px solid red;
   }
 }
 
 
-.gallery {  
-  @include background-basic;
+.gallery {
+  &__header {
+    margin: 5vh auto 2vh;
+    text-align: center;
+  }
+  &__images {
+    width:70%;
+    margin: 5vh auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-auto-rows: auto;
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+    justify-content: center;
+    //border: 1px solid red
+    @media (max-width: 1024px) {
+      grid-template-columns: auto auto auto;
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: auto auto;
+    }
+    @media (max-width: 360px) {
+      grid-template-columns: auto;
+    }
+    
+  }
 }
 
 
@@ -103,4 +134,8 @@ html, body {
     background-repeat: no-repeat;
     background-size: 100%;
     height: 50vh;
+    margin-top: 10vh;
+    &__header {
+      text-align: center;
+    }
   }
