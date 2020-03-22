@@ -132,7 +132,12 @@ html, body {
 .contact {
     background-image: url('../images/contact_background.svg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
+    @media (min-width: 1250px) {
+      background-position: center -20%;
+    };
+
     height: 65vh;
     margin-top: 10vh;
     display: flex;
@@ -147,12 +152,26 @@ html, body {
       flex-wrap: wrap;
       width: 30vw;
       height: 40%;
-      //margin: 10vh 0 0 30vh;
+      margin: 3% 0 0 0;
       //border: 1px solid red
+      @media (max-width: 768px) {
+        width: 60vw;
+      }
+      &_button {
+        @media (max-width: 768px) {
+          text-align: center;
+          margin: auto;
+        } 
+      }
     }
     &__illustration {
-      height: 60%;
+      height: 50%;
+      margin: 3% 0 0 5vw;
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
+
   }
 
   .footer {
