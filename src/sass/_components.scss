@@ -160,3 +160,11 @@
         color: $form-bg-color;
     }
 }
+
+.footer {
+    &__list_element a {
+        font-size: 0.7rem;
+        color: $form-bg-color;
+        margin: 0 1rem 0 1rem;
+    }
+}
