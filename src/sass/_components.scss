@@ -9,19 +9,31 @@
 .header_dark {
     font-weight: bold;
     color: $dark-header-color;
-
+    @media (max-width: 400px) {
+        font-size: 1.2rem;
+    }
     &--big {
         font-size: 2.2rem;
+        @media (max-width: 768px) {
+            font-size: 2rem;
+          }
+        @media (max-width: 400px) {
+            font-size: 1.5rem;
+          }
     }
 
     &--black {
         font-weight: 900;
     }
+
 }
 
 .header_light {
     color: $light-header-color;
     font-size: 1.5rem;
+    @media (max-width: 400px) {
+        font-size: 1.2rem;
+    }
 }
 
 .list_small {
@@ -55,15 +67,19 @@
         display: inline-block;
         vertical-align: center;
         text-align: center;
+
     }
 }
 
 
 .paragraph {
     font-size: $about_text_font_size;
+
     font-weight: 400;
     line-height: 1.3rem;
-
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+    }
 }
 
 .paragraph--light {
@@ -88,15 +104,23 @@
         min-width: 4rem;
         position: absolute;
         left: 0rem;
-        top: 0.3rem
-         
+        top: 0.3rem;
+        @media (max-width: 400px) {
+            max-width: 3.5rem;
+            min-width: 3rem;
+        }
      }
     &__item {
         margin: 1vh auto 8vh 1vw;
         width: 100%;
         padding-left: 5rem;
-        //border: 1px solid red;
         position: relative;
+        @media (max-width: 400px) {
+            padding-left: 3.5rem;
+        }
+    }
+    @media (max-width: 400px) {
+        max-width: 90vw;
     }
 }
 

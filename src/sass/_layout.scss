@@ -6,10 +6,17 @@ html, body {
 .navbar {
     margin-left: $margin-left-small;
     padding-top: 0.6rem;
-  
+    
+    @media (max-width: 400px) {
+      margin-left: 0;
+      display: flex;
+      justify-content: space-evenly;
+    }
     &__element {
       margin: 0 3rem 0.875rem 0;
-
+      @media (max-width: 400px) {
+        margin: 0 0 0.875rem 0;
+      }
     }
   }
 
@@ -20,14 +27,29 @@ html, body {
     
     &__logo {
       height: 27vh;
+      min-height: 200px;;
       max-width: 60vw;
+      min-width: 200px;;
       margin: 1.7rem 0rem 0rem $margin-left-small;
+      @media (max-width: 400px) {
+        margin: 1rem auto 0rem auto;
+        text-align: center;
+        display: block;
+      }
     }
     &__header {
       margin: 1.5rem 0rem 0rem $margin-left-small;
+      @media (max-width: 400px) {
+        margin: 1.5rem auto 0rem auto;
+        text-align: center;
+      }
     }
     &__list {
       margin: 1rem 0rem 0rem 10.5vw;
+      @media (max-width: 400px) {
+        margin: 1rem auto 0rem auto;
+        width: 60%;
+      }
     }
 
   }
@@ -46,6 +68,13 @@ html, body {
     'offer text'
     'illustration call_to_action'
   ;
+  @media (max-width: 768px) {
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    'offer' 
+    'text'
+    'call_to_action'
+  ;}
 
   &__header {
     margin-bottom: 1vh;
@@ -53,15 +82,22 @@ html, body {
 
   &__offer {
     grid-area: offer;
-    //align-self: center;
     justify-self: center;
-    //border: 1px solid red;
     margin: 6vh 1rem auto auto;
-    
     padding-left: 7vw;
+    @media (max-width: 768px) {
+      margin: 0 9vw;
+      max-width: 70%;
+      text-align: center;
+      padding-left: 0;
+    }
     &_list {
        width: 90%;
        padding-left: 1vw;
+       @media (max-width: 768px) {
+        padding: 0;
+        margin: auto;
+      }
       //  margin-top: 1vh;
     }
   }
@@ -74,6 +110,11 @@ html, body {
     //border: 1px solid red;
     max-width: 75%;
     // height: 70%;
+    @media (max-width: 768px) {
+      margin: 0 9vw;
+      max-width: 100%;
+      text-align: center;
+    }
   }
 
   &__text_paragraph {
@@ -85,6 +126,9 @@ html, body {
     height: 40vh;
     grid-area: illustration;
     justify-self: center;
+    @media (max-width: 768px) {
+      display: none;
+    }
     // margin: 1vh 1vw 1vh 13vw;
     // border: 1px solid red;
   }
@@ -93,9 +137,10 @@ html, body {
     grid-area: call_to_action;
     justify-self: center;
     align-self: center;
-    //width: 70%;
     margin: 0 auto auto 0;
-    //border: 1px solid red;
+    @media (max-width: 768px) {
+      margin: 0;
+    }
   }
 }
 
