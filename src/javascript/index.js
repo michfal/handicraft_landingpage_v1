@@ -27,7 +27,7 @@ function filterIdsOfPhoto(data) {
     let photoIds = []
     
     photos.forEach((e) => photoIds.push(e.id))
-    console.log(photoIds)
+    //console.log(photoIds)
     return photoIds
 }
 
@@ -74,29 +74,45 @@ fetchPhotoIds()
 
 
 //==========================
+const imageDisplay = document.querySelector('.j-image_display');
+const galleryExit =  document.querySelector('.j-gallery_exit');
+const container = document.querySelector('.j-container');
 
-//galleryImages.addEventListener('click', galleryImageClick)
+
+galleryImages.addEventListener('click', galleryImageClick)
+galleryExit.addEventListener('click', function() {
+     console.log("click")
+     imageDisplay.classList.remove('image_display__on');
+     removeImage()
+     })
 
 function galleryImageClick() {
-    // if (event.target.tagName == 'IMG') {
-    //     console.log(event.target.classList.value)
-    //     getPhotoById(id, 5, displayImage)
-    // }
+    console.log("click")    
+    if (event.target.tagName == 'IMG') {
+        console.log(event.target.classList.value)
+        let id = event.target.classList.value;
+        getPhotoById(id, 10, displayImage);
+        imageDisplay.classList.add('image_display__on')
+    }
     //test purpose
-    console.log("creating")
-    let id = 49721768792
-    getPhotoById(id, 10, displayImage)
+    // console.log("creating")
+    // let id = 49721768792
+    // getPhotoById(id, 10, displayImage)
 }
 
 function displayImage(source, id) {
-    const imageDisplay = document.querySelector('.j-image_display')
+    
     //create img element
     const image = document.createElement("img");
-    imageDisplay.appendChild(image);
+    container.appendChild(image);
     image.src = `${source}`;
     image.classList.add('image_display__image')
     //assign class image_display__image
     //append child image display
 }
 
-galleryImageClick()
+function removeImage() {
+    container.removeChild(container.childNodes[0])
+}
+
+//galleryImageClick()
