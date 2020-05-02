@@ -65,8 +65,11 @@ function createGalleryImage(source, id) {
     const image = document.createElement("img");
     imageContainer.appendChild(image);
     image.src = `${source}`
+    
     if(id) {
-        image.classList.add(`${id}`)
+        image.setAttribute('data-id', `${id}`);
+        //image.classList.add(`${id}`)
+        image.classList.add('gallery_image')
     }
 }
 
@@ -77,42 +80,81 @@ fetchPhotoIds()
 const imageDisplay = document.querySelector('.j-image_display');
 const galleryExit =  document.querySelector('.j-gallery_exit');
 const container = document.querySelector('.j-container');
+let currentImgId;
+let currentIndex;
+let displayedPhotoIds;
+//const arrows = document.querySelectorAll('.image_display__button')
 
 
 galleryImages.addEventListener('click', galleryImageClick)
 galleryExit.addEventListener('click', function() {
-     console.log("click")
      imageDisplay.classList.remove('image_display__on');
-     removeImage()
+     removeImage();
+     currentIndex = null;
      })
+imageDisplay.addEventListener('click', arrowClick)
 
-function galleryImageClick() {
-    console.log("click")    
-    if (event.target.tagName == 'IMG') {
-        console.log(event.target.classList.value)
-        let id = event.target.classList.value;
-        getPhotoById(id, 10, displayImage);
-        imageDisplay.classList.add('image_display__on')
+//change pictures with arrows
+function arrowClick() {
+    // console.log("current img id: " + currentImgId);
+    // console.log(currentIndex)
+    if(event.target.tagName == 'BUTTON' || event.target.tagName == 'I') {
+        let side = event.target.getAttribute('data-side')
+        if(side == "right" && currentIndex < displayedPhotoIds.length - 1){
+            currentIndex++;
+            console.log("up " + currentIndex);
+            removeImage();
+            getPhotoById(displayedPhotoIds[currentIndex], 10, displayImage);
+        }
+        if(side == "left" && currentIndex > 0){
+            currentIndex--;
+            console.log("down " + currentIndex);
+            removeImage();
+            getPhotoById(displayedPhotoIds[currentIndex], 10, displayImage);
+        }
     }
-    //test purpose
-    // console.log("creating")
-    // let id = 49721768792
-    // getPhotoById(id, 10, displayImage)
 }
 
-function displayImage(source, id) {
+
+//gets id of clicked image an
+function galleryImageClick() {
+        
+    if (event.target.tagName == 'IMG') {
+        
+        currentImgId = event.target.getAttribute('data-id')
+        getPhotoById(currentImgId, 10, displayImage);
+        imageDisplay.classList.add('image_display__on');
+
+        displayedPhotoIds = getPhotoData()
+        currentIndex = displayedPhotoIds.indexOf(currentImgId);
+        
+    }
+}
+
+function displayImage(source) {
     
     //create img element
     const image = document.createElement("img");
     container.appendChild(image);
     image.src = `${source}`;
     image.classList.add('image_display__image')
-    //assign class image_display__image
-    //append child image display
 }
 
 function removeImage() {
     container.removeChild(container.childNodes[0])
 }
+
+//returns array of ids in gallery
+function getPhotoData() {
+    const images = document.querySelectorAll('.gallery_image');
+    let imageIds = []
+    images.forEach(function(e){imageIds.push(e.getAttribute('data-id'))})
+    console.log(imageIds)
+    return imageIds
+}
+
+
+//get index of current photo by its id
+//add event listener to arrows that creates image according to next id
 
 //galleryImageClick()
