@@ -158,3 +158,17 @@ function getPhotoData() {
 //add event listener to arrows that creates image according to next id
 
 //galleryImageClick()
+
+
+// const scroll = new SmoothScroll('navbar a[href*="#"]', {
+// 	speed: 300
+// });
+
+// import ("https://cferdinandi.github.io/smooth-scroll/dist/smooth-scroll.js")
+//   .then(function () {
+//     new SmoothScroll("a[href*=\"#\"]"); // eslint-disable-line
+// 	console.log('resolved!');
+//   });
+
+//   import SmoothScroll from "https://cferdinandi.github.io/smooth-scroll/dist/smooth-scroll.js";
+// const scroll = new SmoothScroll("[data-scroll]");

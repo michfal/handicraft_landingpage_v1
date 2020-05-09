@@ -3,7 +3,13 @@ html, body {
     
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y;
+}
+
 .navbar {
+    //position: fixed;
     margin-left: $margin-left-small;
     padding-top: 0.6rem;
     
