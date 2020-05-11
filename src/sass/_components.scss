@@ -135,8 +135,6 @@
 }
 .image_container {
     overflow: hidden;
-    // width: 9rem;
-    // height: 9rem;
     width: 15vw;
     height: 15vw;
     min-height: $image-container-min-size;
@@ -146,13 +144,18 @@
     background-color: black;
     position: relative;
     cursor: pointer;
+
     img {
         position: absolute;
-        left: -20%;
-        top: -20;
+        left: -30%;
+        top: -30;
         max-width: none;
-        //min-width: 100%;
         min-height: 100%;
+        transition: transform 0.5s ease;
+        &:hover {
+            transition: transform 0.5s ease;    
+            transform: scale(1.07);
+        }
     }
     @media (max-width: 450px) {
         min-height: 230px;
