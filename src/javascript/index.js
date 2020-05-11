@@ -18,7 +18,7 @@ function fetchPhotoIds() {
 }
 
 
-//filters raw data
+//filters raw data from flickr api returns array of photo Id
 function filterIdsOfPhoto(data) {
     const pulledValues = data;
     const photos = (pulledValues.photos).photo
@@ -154,21 +154,11 @@ function getPhotoData() {
 }
 
 
-//get index of current photo by its id
-//add event listener to arrows that creates image according to next id
+function getCurrentDate() {
+    const footerDate = document.querySelector('.j-copyright_date')
+    const today = new Date();
+    const year = today.getFullYear()
+    footerDate.innerHTML = `${year}`
+}
 
-//galleryImageClick()
-
-
-// const scroll = new SmoothScroll('navbar a[href*="#"]', {
-// 	speed: 300
-// });
-
-// import ("https://cferdinandi.github.io/smooth-scroll/dist/smooth-scroll.js")
-//   .then(function () {
-//     new SmoothScroll("a[href*=\"#\"]"); // eslint-disable-line
-// 	console.log('resolved!');
-//   });
-
-//   import SmoothScroll from "https://cferdinandi.github.io/smooth-scroll/dist/smooth-scroll.js";
-// const scroll = new SmoothScroll("[data-scroll]");
+getCurrentDate()
