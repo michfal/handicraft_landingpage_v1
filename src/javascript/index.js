@@ -162,3 +162,7 @@ function getCurrentDate() {
 }
 
 getCurrentDate()
+
+const formButton = document.querySelector('.j-form_button')
+
+//formButton.addEventListener('click', (e) => {e.preventDefault()})
