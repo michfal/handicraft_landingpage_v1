@@ -8,6 +8,14 @@ html {
   scroll-snap-type: y;
 }
 
+.container {
+  background-image: url('../images/website_background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
 .navbar {
     //position: fixed;
     margin-left: $margin-left-small;
@@ -28,16 +36,20 @@ html {
 
 
 .main {
-    background-image: url('../images/header_background.svg');
-    @include background-basic;
-    
+    //background-image: url('../images/header_background.svg');
+    //@include background-basic;
+    height: 100vh;
+    // // min-width: 100vw;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
     &__logo {
       height: 27vh;
       min-height: 200px;;
       max-width: 60vw;
       min-width: 200px;;
       margin: 1.7rem 0rem 0rem $margin-left-small;
-      @media (max-width: 400px) {
+      @media (max-width: 500px) {
         margin: 1rem auto 0rem auto;
         text-align: center;
         display: block;
@@ -45,16 +57,26 @@ html {
     }
     &__header {
       margin: 1.5rem 0rem 0rem $margin-left-small;
-      @media (max-width: 400px) {
+      @media (max-width: 500px) {
         margin: 1.5rem auto 0rem auto;
         text-align: center;
       }
     }
     &__list {
       margin: 1rem 0rem 0rem 10.5vw;
-      @media (max-width: 400px) {
+      @media (max-width: 500px) {
         margin: 1rem auto 0rem auto;
         width: 60%;
+      }
+    }
+    &__illustration {
+      height: 90vh;
+      position: absolute;
+      top: 0;
+      left: 60vw;
+      z-index: -1;
+      @media (max-width: 700px) {
+        display: none;
       }
     }
 
@@ -63,10 +85,11 @@ html {
 
 
 .about {
-  background-image: url('../images/about_background.svg');
-  @include background-basic;
+  //background-image: url('../images/about_background.svg');
+  //@include background-basic;
 
   //border: 1px solid red;
+  min-height: 100vh;
   
   display: grid;
   grid-template-columns: 50% 50%;
@@ -116,7 +139,7 @@ html {
     //align-self: center;
     margin: 6vh 3rem 0 0;
     //border: 1px solid red;
-    max-width: 75%;
+    max-width: 70%;
     // height: 70%;
     @media (max-width: 768px) {
       margin: 0 9vw;
@@ -126,14 +149,16 @@ html {
   }
 
   &__text_paragraph {
-    // margin-top: 1vh;
+
     margin-bottom: 1rem;
+    word-wrap: initial;  
   }
 
   &__illustration {
     height: 40vh;
     grid-area: illustration;
     justify-self: center;
+    
     @media (max-width: 768px) {
       display: none;
     }
@@ -232,7 +257,7 @@ html {
   .footer {
     height: 10vh;
     max-height: 5rem;
-    background-color: $footer-bg-color;
+    background-color: $dark-header-color;
     display: flex;
     flex-wrap: wrap;
     &__list {
@@ -245,3 +270,5 @@ html {
       }
     }
   }
+
+
