@@ -210,41 +210,64 @@ html {
 
 
 .contact {
+    //border: 1px solid red;
     background-image: url('../images/contact_background.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
-    @media (min-width: 1250px) {
-      background-position: center -20%;
-    };
-
-    height: 45vh;
+    height: 80vh;
     margin-top: 10vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    @media (min-width: 1250px) {
+      background-position: center -20%; 
+    };
     &__header {
+      align-self: flex-start;
       text-align: center;
       width: 100%;
     }
 
     &__info {
-      height: 100%;
-      &_points {
-        height: 100%;
-        z-index: 1;
+      // border: 1px solid red;
+      height: 8rem;
+      // z-index: 2;
+      position: relative;
+      &_list_point {
+        color: $dark-header-color;
+        font-weight: 600;
+        font-size: 0.7rem;
+        text-align: center;
+        width: 20vw;
+        min-width: 12rem;
+        padding: 0.4rem 0;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        background-color: #E7EEF4;
+        //z-index: 2;
+        position: relative;
+        &_image {
+          height: 2.5rem;
+          position: absolute;
+          //z-index: 1;
+          left: 0.5rem;
+          bottom: 0.2rem;
+        }
       }
       &_bubbles {
         position: absolute;
-        top: 40%;
+        top: 0%;
         left: 15%;
-        height: 30%;
+        height: 200%;
+        //width: 80vw;
+        z-index: 0;
       }
     }
     &__illustration {
-      height: 50%;
-      margin: 3% 0 0 5vw;
+      height: 40%;
+      margin: 0 0 3% 8vw;
       @media (max-width: 768px) {
         display: none;
       }

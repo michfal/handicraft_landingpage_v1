@@ -227,43 +227,12 @@
     }
 }
 
-.button_right {
-    order: 3
-}
-
-.form {
-    &__input {
-        background-color: $form-bg-color;
-        border-radius: 0.3rem;
-        padding: 1%;
-    }
-    &__input::placeholder {
-        color: $dark-header-color;
-    }
-    &__input_text {
-        height: 4vh;
-        width: 46%;
-        margin: 1%;
-        
-    }
-    &__input_textarea {
-        width: 96%;
-        height: 20vh;
-        margin: 1%;   
-    }
-    &__input_button {
-        background-color: $footer-bg-color;
-        width: 46%;
-        height: 4vh;
-        margin: 1%;
-        color: $form-bg-color;
-    }
-}
 
 .footer {
     &__list_element a {
-        font-size: 0.7rem;
-        color: $dark-header-color;
+        font-size: 0.6rem;
+        color: #F8F4FC;
         margin: 0 1rem 0 1rem;
+        font-weight: 500;
     }
 }
