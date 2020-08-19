@@ -31,3 +31,11 @@ function getCurrentDate() {
 getCurrentDate()
 
 const formButton = document.querySelector('.j-form_button')
+
+
+const cookieMessageBtn = document.querySelector('.cookie_message__button');
+const cookieMessage = document.querySelector('.cookie_message');
+
+cookieMessageBtn.addEventListener('click', () => {
+    cookieMessage.style.display = "none";
+})

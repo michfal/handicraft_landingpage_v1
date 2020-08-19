@@ -73,10 +73,13 @@ html {
       height: 90vh;
       position: absolute;
       top: 0;
-      left: 60vw;
+      left: 50vw;
       z-index: -1;
       @media (max-width: 700px) {
         display: none;
+      }
+      @media (max-width: 950px) {
+        left: 60vw;
       }
     }
 
