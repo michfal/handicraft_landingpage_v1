@@ -5,7 +5,7 @@ export const galleryContainer = {
 
 class GalleryElements {
     constructor(){
-        this.key = "74f4e44187e9b604246cfdba369c24a6";
+        this.key = "";
         this.userId = "187676962@N05";
     }
     fetchPhotoIds() { 
